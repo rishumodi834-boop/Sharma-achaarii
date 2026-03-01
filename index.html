@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHARMA ACHAARI - Ghar ka Swad</title>
+    <style>
+        /* Website ka Look (CSS) */
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: #fffaf0; color: #333; }
+        header { background-color: #e67e22; color: white; padding: 20px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        .container { padding: 20px; }
+        .product-card { background: white; border-radius: 15px; padding: 15px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; }
+        .product-card img { width: 100%; border-radius: 10px; max-height: 200px; object-fit: cover; }
+        .price { font-size: 1.2rem; color: #27ae60; font-weight: bold; }
+        .btn-order { background-color: #25d366; color: white; border: none; padding: 12px 25px; border-radius: 25px; font-size: 1rem; cursor: pointer; margin-top: 10px; width: 100%; }
+        footer { text-align: center; padding: 20px; font-size: 0.8rem; color: #777; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SHARMA ACHAARI 🌶️</h1>
+        <p>Ghar ka bana Achaar aur Tiffin Service</p>
+    </header>
+
+    <div class="container">
+        <div class="product-card">
+            <h3>Aam ka Chatpata Achaar</h3>
+            <p>500gm ka dabba - Bilkul shudh</p>
+            <p class="price">₹150</p>
+            <button class="btn-order" onclick="sendWhatsApp('Aam ka Achaar')">WhatsApp par Order Karein</button>
+        </div>
+
+        <div class="product-card">
+            <h3>Daily Veg Tiffin</h3>
+            <p>Roti, Daal, Chawal, Sabzi aur Achaar</p>
+            <p class="price">₹80 (Per Meal)</p>
+            <button class="btn-order" onclick="sendWhatsApp('Tiffin Service')">Tiffin Book Karein</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Sharma Achaari - Aapki apni local shop</p>
+    </footer>
+
+    <script>
+        function sendWhatsApp(itemName) {
+            // Apna WhatsApp number yahan dalein (91 ke saath)
+            let myNumber = "919876543210"; 
+            let message = "Namaste Sharma Ji, mujhe '" + itemName + "' ka order dena hai. Details bataiye.";
+            let url = "https://wa.me/" + myNumber + "?text=" + encodeURIComponent(message);
+            window.open(url, '_blank');
+        }
+    </script>
+
+</body>
+</html>
+(
